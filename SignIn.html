@@ -1,0 +1,155 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/login_style.css">
+    <style>
+        .formcontainer { 
+            border-radius: 10px;
+            padding-left: 15px;
+            padding-top: 0%;
+            padding-bottom: 30%;
+            padding-inline-start: 10%;
+            padding-inline-end: 100%;
+            border-spacing: 100px;
+            height: 100px;
+            word-wrap: normal;
+            word-spacing: normal;
+        }
+
+        body {
+            background-image: url("img/reg2.jpeg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            overflow: hidden;
+        }
+
+        h1 {
+            text-align: right;
+            text-decoration: solid;
+            font-size: 40px;
+            padding-right: 130px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: black;
+        }
+
+        label {
+            font-size: medium;
+        }
+
+        button {
+            align-items: center;
+            padding-top: 10%;
+            padding-bottom: 20%;
+        }
+
+        #main-holder {
+            margin-block-start: 0%;
+            margin-block-end: 80%;
+            margin-inline-start: 55%;
+            margin-inline-end: 90%;
+            padding-right: 30px;
+            width: 38%;
+            height: 85%;
+            display: flex;
+            background-color: antiquewhite;
+            border-radius: 7px;
+            box-shadow: 0px 0px 5px 2px black;
+        }
+    </style>
+    <script>
+        function myvalidate(form) {
+            var fname = form.firstname.value;
+            var mname = form.middlename.value;
+            var lname = form.lastname.value;
+            var age = form.age.value;
+            var d = form.mydate.value;
+            var g = form.gender.value;
+            var add = form.info.value;
+            var Cnum = form.cno.value;
+            if (fname.length === 0) {
+                alert("Enter valid first name");
+                return false;
+            }
+            if (mname.length === 0) {
+                alert("Enter valid Middle name");
+                return false;
+            }
+            if (lname.length === 0) {
+                alert("Enter valid lastname");
+                return false;
+            }
+            if (d.lengdth === 0) {
+                alert("Please enter Date of Birth");
+                return false;
+            }
+
+            if (age.length === 0) {
+                alert("Enter valid age");
+                return false;
+            }
+            if (g.length === 0) {
+                alert("Please choose your gender");
+                return false;
+            }
+            if (add.length === 0) {
+                alert("Enter your valid address");
+                return false;
+            }
+            if (!this.form.checkbox.checked) {
+                alert("Please choose at least one course");
+                return false;
+            }
+            if (Cnum.length === 0) {
+                alert("Please enter contact number");
+                return false;
+            }
+            else if (Cnum.length < 10) {
+                alert("Enter 10 digit valid contact number");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>WELCOME TO YOUR BRAND</h1>
+    <br>
+    <main id="main-holder">
+        <form class="formcontainer" action="LoginNew.html" onsubmit="return myvalidate(this);">
+            <center><h2>Create Account</h2></center>
+            <label>FirstName:
+                <input type="text" name="firstname" size="40">
+            </label>
+            <label>MiddleName:
+                <input type="text" name="middlename" size="40">
+            </label>
+            <label>LastName:
+                <input type="text" name="lastname" size="40">
+            </label>
+            <label>Email Id:
+                <input type="email" name="myemail" size="40">
+            </label>
+            <label>DOB:
+                <input type="date" name="mydate">
+            </label>
+            <label>Age:
+                <input type="text" name="age" size="40">
+            </label>
+            <label>Gender: </th>
+                <input type="radio" name="gender" value="m">Male
+                <input type="radio" name="gender" value="f">Female
+            </label><br>
+            <label>Address: </label>
+            <textarea name="info" rows="3" cols="50" size="40"></textarea>
+            <label>ContactNo :
+                <input type="text" name="cno" size="40">
+            </label>
+            <center><button class="btn btn-primary">Create Account</button></center>
+        </form>
+    </main>
+</body>

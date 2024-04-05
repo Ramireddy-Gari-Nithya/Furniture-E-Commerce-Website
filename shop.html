@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Now</title>
+    <style>
+        body{
+            background: linear-gradient(lightpink,darkblue);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+
+        .grid img {
+
+            height: 500px;
+            width: 500px;
+            border-radius: 20px;
+        }
+
+        .box {
+            border: 2px rgb(0, 179, 255) solid;
+            border-radius: 20px;
+        }
+        .name{
+            color: rgb(0, 112, 186);
+        }
+        #title{
+            border: 2px black solid;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <center><h1 id="title1">Shop Now</h1>
+    <h2 class="name">Chair Colletion</h2></center>
+    <div class="grid">
+        <div class="box"><img src="img/chair1.jpg">
+            <center>
+                <h2>White Chair</h2>
+                <h3>Rs. 1090/-</h3>
+            </center>
+        </div>
+        <div class="box"><img src="img/chair2.jpg">
+            <center>
+                <h2>Bean Bag</h2>
+                <h3>Rs. 1400/-</h3>
+            </center>
+           
+        </div>
+        <div class="box"><img src="img/chair3.jpg">
+            <center>
+                <h2>Black Chair</h2>
+                <h3>Rs. 990/-</h3>
+            </center>
+            
+        </div>
+        </div>
+        <center><h2 class="name">Sofa Collection</h2></center>
+        <div class="grid">
+        <div class="box"><img src="img/sofa1.jpg">
+            <center>
+                <h2>Classy Sofa</h2>
+                <h3>Rs. 8011/-</h3>
+            </center>
+        </div>
+        <div class="box"><img src="img/sofa2.jpg">
+            <center>
+                <h2>Solimo Sofa</h2>
+                <h3>Rs. 9090/-</h3>
+            </center>
+        </div>
+        <div class="box"><img src="https://m.media-amazon.com/images/I/61r+E1kbjAL.jpg">
+            <center>
+                <h2>Royal Sofa</h2>
+                <h3>Rs. 10090/-</h3>
+            </center>
+        </div>
+
+    </div>
+</body>
+</html>
